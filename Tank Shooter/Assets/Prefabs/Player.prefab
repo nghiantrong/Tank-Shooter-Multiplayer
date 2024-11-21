@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6977514961565585105}
   - component: {fileID: 6197138342625323792}
   - component: {fileID: 8727056008808408028}
+  - component: {fileID: 5479225438797805310}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -185,6 +186,20 @@ MonoBehaviour:
   <MaxHealth>k__BackingField: 100
   CurrentHealth:
     m_InternalValue: 0
+--- !u!114 &5479225438797805310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471559124486791325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1399618515b279b40a6c63eddb071b6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalCoins:
+    m_InternalValue: 0
 --- !u!1 &684361810837889554
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +337,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -414121079
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f9ee3f7edf856b84da69982dc5129121, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -556,7 +571,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -414121079
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 5e74a6d3cabbb324eabb21d9e0591f2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -748,7 +763,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -414121079
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 200
   m_Sprite: {fileID: 21300000, guid: ae3a16aafce008f44a2f02341b777cac, type: 3}
   m_Color: {r: 0.94509804, g: 0.49411765, b: 0.90588236, a: 1}
@@ -832,7 +847,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -414121079
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: d18a601c6b061ac4f8dfd161ec62d0fe, type: 3}
   m_Color: {r: 0.9433962, g: 0.493948, b: 0.90402186, a: 1}
