@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalObjectIdHash: 2776043473
+  GlobalObjectIdHash: 951757798
   AlwaysReplicateAsRoot: 0
   SynchronizeTransform: 1
   ActiveSceneSynchronization: 0
@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputReader: {fileID: 11400000, guid: 81b71240eec387c459252185e28ec9aa, type: 2}
+  coinCollector: {fileID: 5479225438797805310}
   projectileSpawnPoint: {fileID: 7868141593879279580}
   serverProjectilePrefab: {fileID: 8280125864393255335, guid: 7260650dd45d62c429ec38cf554e5c1d, type: 3}
   clientProjectilePrefab: {fileID: 3334918206687255122, guid: fdebe2e9e5e94604f99e327602c0265d, type: 3}
@@ -171,6 +172,7 @@ MonoBehaviour:
   projectileSpeed: 30
   fireRate: 0.75
   muzzleFlashDuration: 0.075
+  costToFire: 5
 --- !u!114 &8727056008808408028
 MonoBehaviour:
   m_ObjectHideFlags: 0

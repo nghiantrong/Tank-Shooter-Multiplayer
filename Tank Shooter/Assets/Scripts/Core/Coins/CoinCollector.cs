@@ -22,4 +22,9 @@ public class CoinCollector : NetworkBehaviour
 
         TotalCoins.Value += coinValue;
     }
+
+    public void SpendCoins(int costToFire)
+    {
+        TotalCoins.Value -= costToFire;
+    }
 }
