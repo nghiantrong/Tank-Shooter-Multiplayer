@@ -47,11 +47,13 @@ public class HostGameManager
 
         UnityTransport transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
 
-        RelayServerData relayServerData = new RelayServerData(allocation, "udp");
+        //use dtls instead of udp for secure purposes
+        RelayServerData relayServerData = new RelayServerData(allocation, "dtls");
         transport.SetRelayServerData(relayServerData);
 
         NetworkManager.Singleton.StartHost();
 
+        //only server needs to handle change scene because server changes scene for the client
         NetworkManager.Singleton.SceneManager.LoadScene(GAME_SCENE_NAME, LoadSceneMode.Single);
     }
 }
