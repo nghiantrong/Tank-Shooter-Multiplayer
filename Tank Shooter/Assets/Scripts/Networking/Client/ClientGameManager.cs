@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using Unity.Networking.Transport.Relay;
+using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Relay;
 using Unity.Services.Relay.Models;
@@ -18,9 +19,13 @@ public class ClientGameManager
 
     private JoinAllocation joinAllocation;
 
+    private NetworkClient networkClient;
+
     public async Task<bool> InitAsync()
     {
         await UnityServices.InitializeAsync();
+
+        networkClient = new NetworkClient(NetworkManager.Singleton);
 
         //Authenticate player
         AuthState authState = await AuthenticationHandler.DoAuth();
@@ -57,7 +62,8 @@ public class ClientGameManager
 
         UserData userData = new UserData
         {
-            userName = PlayerPrefs.GetString(NameSelector.PLAYER_NAME_KEY, "MissingName")
+            userName = PlayerPrefs.GetString(NameSelector.PLAYER_NAME_KEY, "MissingName"),
+            userAuthId = AuthenticationService.Instance.PlayerId
         };
         string payload = JsonUtility.ToJson(userData);
         byte[] payloadBytes = Encoding.UTF8.GetBytes(payload);
