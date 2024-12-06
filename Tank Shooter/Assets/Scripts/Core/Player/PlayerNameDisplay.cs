@@ -21,6 +21,15 @@ public class PlayerNameDisplay : MonoBehaviour
         FixedString32Bytes newName)
     {
         playerNameText.text = newName.ToString();
+
+        if (player.isPlayer)
+        {
+            playerNameText.color = Color.white;
+        }
+        else
+        {
+            playerNameText.color = Color.magenta;
+        }
     }
 
     private void OnDestroy()

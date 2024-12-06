@@ -15,6 +15,8 @@ public class TankPlayer : NetworkBehaviour
 
     public NetworkVariable<FixedString32Bytes> PlayerName = new NetworkVariable<FixedString32Bytes>();
 
+    public bool isPlayer;
+
     public override void OnNetworkSpawn()
     {
         if (IsServer)
@@ -28,6 +30,7 @@ public class TankPlayer : NetworkBehaviour
         if (IsOwner)
         {
             virtualCamera.Priority = ownerPriority;
+            isPlayer = true;
         }
     }
 }
