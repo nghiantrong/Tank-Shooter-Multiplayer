@@ -23,6 +23,11 @@ public class NetworkClient : IDisposable
         //only shutdown if it is the client being disconnected
         if (clientId != 0 && clientId != networkManager.LocalClientId) { return; }
 
+        Disconnect();
+    }
+
+    public void Disconnect()
+    {
         if (SceneManager.GetActiveScene().name != MENU_SCENE_NAME)
         {
             SceneManager.LoadScene(MENU_SCENE_NAME);
